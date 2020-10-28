@@ -10,7 +10,9 @@ app_ui <- function(request) {
     golem_add_external_resources(),
     # List the first level UI elements here 
     fluidPage(
-      h1("hamiltonWheredid")
+      #mod_original_ui("original_ui_1")
+      mod_top_ui_ui("top_ui_ui_1")
+      
     )
   )
 }
@@ -28,11 +30,18 @@ golem_add_external_resources <- function(){
   add_resource_path(
     'www', app_sys('app/www')
   )
+  add_resource_path(
+    "www", system.file("app/www", package = "hamiltonCovid19")
+  )
  
   tags$head(
     favicon(),
     bundle_resources(
       path = app_sys('app/www'),
+      app_title = 'hamiltonWheredid'
+    ),
+    bundle_resources(
+      path = system.file("app/www", package = "hamiltonCovid19"),
       app_title = 'hamiltonWheredid'
     )
     # Add here other external resources
