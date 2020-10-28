@@ -1,8 +1,8 @@
 Package: hamiltonWheredid
-Title: PKG_TITLE
+Title: Hamilton where did Ireland import its covid-19 cases from
 Version: 0.0.0.9000
-Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'AUTHOR@MAIL.COM', role = c('cre', 'aut'))
-Description: PKG_DESC.
+Authors@R: person('AUTHOR_FIRST', 'AUTHOR_LAST', email = 'consultoria@rseis.com.br', role = c('cre', 'aut'))
+Description: Golem package for the where did app.
 License: MIT + file LICENSE
 Imports: 
     config,
@@ -23,3 +23,5 @@ Remotes:
     curso-r/hamiltonCovid19
 Depends: 
     R (>= 2.10)
+URL: https://github.com/curso-r/hamiltonWheredid
+BugReports: https://github.com/curso-r/hamiltonWheredid/issues
