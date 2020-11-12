@@ -15,7 +15,7 @@ mod_top_ui_ui <- function(id){
       sidebar_collapsed = TRUE,
       sidebar_mini = FALSE,
       body = bs4Dash::bs4DashBody(
-        fresh::use_theme(hamiltonCovid19::theme_bs4Dash()),
+        hamiltonThemes::use_bs4Dash_distill_theme(),
         br(),
         fluidRow(
           bs4Dash::column(
@@ -44,7 +44,7 @@ mod_top_ui_ui <- function(id){
             collapsible = FALSE,
             bs4Dash::bs4TabPanel(
               tabName = "Plot",
-              plotOutput(ns("plot")) %>% hamiltonCovid19::with_load_spinner()
+              plotOutput(ns("plot")) %>% hamiltonThemes::distill_load_spinner()
             ),
             bs4Dash::bs4TabPanel(
               tabName = "Assumptions",
@@ -57,8 +57,8 @@ mod_top_ui_ui <- function(id){
                          "5- 21 days lag is assumed from infection to death.<br>",
                          "6- All values are means."))),
             )
-          )
-          
+          ),
+          hamiltonThemes:::bs4dash_distill_footer()
         )
       )
     )

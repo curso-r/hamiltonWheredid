@@ -14,7 +14,7 @@ mod_original_ui <- function(id){
       sidebar_collapsed = TRUE,
       sidebar_mini = FALSE,
       body = bs4Dash::bs4DashBody(
-        fresh::use_theme(hamiltonCovid19::theme_bs4Dash()),
+        hamiltonThemes::use_bs4Dash_distill_theme()),
         fluidRow(
           bs4Dash::column(
             width = 4,
@@ -40,7 +40,7 @@ mod_original_ui <- function(id){
               collapsible = FALSE,
               bs4Dash::bs4TabPanel(
                 tabName = "Plot",
-                plotOutput(ns("plot")) %>% hamiltonCovid19::with_load_spinner()
+                plotOutput(ns("plot")) %>% hamiltonThemes::distill_load_spinner()
               ),
               bs4Dash::bs4TabPanel(
                 tabName = "Assumptions",
@@ -53,11 +53,13 @@ mod_original_ui <- function(id){
                   "6- All values are means."))),
                 )
               )
-            )
+            ),
+          hamiltonThemes:::bs4dash_distill_footer()
            )
          )
        )
-    )
+    
+
   
 
     
