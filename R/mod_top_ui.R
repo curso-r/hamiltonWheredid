@@ -57,10 +57,10 @@ mod_top_ui_ui <- function(id){
                          "5- 21 days lag is assumed from infection to death.<br>",
                          "6- All values are means."))),
             )
-          ),
-          hamiltonThemes:::bs4dash_distill_footer()
+          )
         )
-      )
+      ),
+      footer = hamiltonThemes:::bs4dash_distill_footer()
     )
   )
   
